@@ -5,6 +5,10 @@ import zipfile
 import smtplib
 from pydub import AudioSegment
 from email.message import EmailMessage
+import imageio_ffmpeg
+
+
+AudioSegment.converter = imageio_ffmpeg.get_ffmpeg_exe()
 
 
 # ------------------------------------
